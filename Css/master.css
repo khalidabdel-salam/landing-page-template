@@ -1,0 +1,190 @@
+/* Start Golbal Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: century;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Midum */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Golbal Rules */
+/* Start header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+header .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+@media (max-width: 990px) {
+  header .container {
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+  }
+}
+.logo img {
+  height: 150px;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding-top: 65px;
+  margin-right: 30px;
+}
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: white;
+}
+.menu-toggle:hover + ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+header ul:not(.dropdown) {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+header li {
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: 0.5s ease;
+}
+header ul li:hover a:not(.more-recipes .dropdown a) {
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+.more-recipes {
+  position: relative;
+}
+@media (max-width: 991px) {
+  .more-recipes {
+    display: none;
+  }
+}
+.more-recipes .dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: transparent;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  display: none;
+  border-radius: 5px;
+}
+.more-recipes .dropdown li a {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 5px;
+  padding: 8px 15px;
+  display: block;
+}
+.more-recipes .dropdown li:hover a {
+  background: #eee;
+  color: #333;
+  transform: translateX(6px);
+}
+.more-recipes:hover .dropdown {
+  display: block;
+}
+@media (max-width: 991px) {
+  header > .container > ul {
+    display: none;
+  }
+}
+/* End header */
+/* Start Landing */
+.landing {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/aa.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+.landing .heading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landing .heading-text h1 {
+  color: #fff;
+  font-size: clamp(50px, 5vw, 70px);
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .landing .heading-text {
+    display: none;
+  }
+}
+.landing .button {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landing .button .btn {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.landing .button .btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+@media (max-width: 767px) {
+  .landing .button .btn {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+/* End Landing */
